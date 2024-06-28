@@ -1,11 +1,14 @@
 # install ORNL pymca (contains TAS spec file parser, conda env)
-
+```bash
 cd /epics/support
 git clone https://github.com/ornl-hkl-projects/pymca 
 
 cd pymca
 conda env create -f env.yml
 conda activate pymca
+
+pip install .
+```
 
 #TODO
 configure ioc to use this conda env

@@ -1,0 +1,5 @@
+record(ai, "pymca:on") {
+    field(DESC, "pymca on")
+    field(DTYP, "pydev")
+    field(INP, "@pymca_window.load_datafile")
+}

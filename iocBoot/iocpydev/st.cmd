@@ -17,5 +17,5 @@ dbLoadRecords("${TOP}/db/pymca.db")
 cd ${TOP}/iocBoot/${IOC}
 
 pydev("import ab2")
-pydev("pymca_window = ab2.TASPyMca()")
-pydev("pymca_window.load_dataset()")
+pydev("pymca_window = ab2.TASpymca()")
+pydev("pymca_window.load_datafile()")

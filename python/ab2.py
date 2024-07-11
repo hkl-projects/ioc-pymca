@@ -1,7 +1,7 @@
 from PyMca5.PyMcaGui.pymca.PyMcaMain import PyMcaMain
 from PyMca5.PyMcaGui import PyMcaQt as qt
-from PyMca5.PyMcaGui.pymca import QDispatcher
-from PyMca5.PyMcaGui.plotting.PlotWindow import PlotWindow as pltwind 
+#from PyMca5.PyMcaGui.pymca import QDispatcher
+#from PyMca5.PyMcaGui.plotting.PlotWindow import PlotWindow as pltwind 
 
 class TASpymca():
     def __init__(self):
@@ -16,9 +16,12 @@ class TASpymca():
         
         # FULL PyMca
         self.wind = PyMcaMain()
+        self.wind.show()
 
         self.x_data_name = '' # get from datafile header
         self.y_data_name = '' # get from datafile header
+
+        self.app.exec()
 
     def load_datafile(self):
         '''

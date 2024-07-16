@@ -8,5 +8,6 @@ dependencies:
   - pip:
     - -r requirements.txt
     - git+https://github.com/hkl-projects/pymca.git
-
+    - PyQt5
+    
 

@@ -1,4 +1,4 @@
-# install ORNL pymca (contains TAS spec file parser, conda env)
+# install and activate conda environment
 ```bash
 conda env create -f environment.yml
 conda activate pymca

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-07-15 14:44:02 by l3b-->
+<display version="2.0.0">
+  <width>780</width>
+  <height>500</height>
+  <background_color>
+    <color red="240" green="240" blue="240">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_step_x>6</grid_step_x>
+  <grid_step_y>6</grid_step_y>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions>
+      <action type="command">
+        <command>pymca</command>
+        <description>Execute Command</description>
+      </action>
+    </actions>
+    <x>168</x>
+    <y>90</y>
+    <width>336</width>
+    <height>210</height>
+  </widget>
+</display>

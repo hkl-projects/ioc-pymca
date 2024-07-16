@@ -11,7 +11,6 @@ cd iocBoot/iocpydev
 ```
 
 # Original PyDevice README
-
 # PyDevice
 
 PyDevice is an EPICS device support for Python interpreter. It allows to connect EPICS database records with Python code.

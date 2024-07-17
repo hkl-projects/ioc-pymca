@@ -2,10 +2,33 @@ from PyMca5.PyMcaGui.pymca.PyMcaMain import PyMcaMain
 from PyMca5.PyMcaGui import PyMcaQt as qt
 from PyMca5.PyMcaGui.pymca.ScanWindowInfoWidget import GraphInfoWidget
 from PyMca5 import PyMcaDataDir
+from PyQt5.QtCore import QThread,QTimer
 #from PyMca5.PyMcaGui.pymca import QDispatcher
 #from PyMca5.PyMcaGui.plotting.PlotWindow import PlotWindow as pltwind 
 import epics
 import os
+
+class WorkerThread(QThread):
+    def __init__(self):
+        super().__init__()
+        self.m_timer = QTimer(self)
+        self.m_timer.timeout.connect(self.processEvents)
+        self.m_timer.start(1000)
+
+    def run(self):
+        self.app = qt.QApplication([])
+        # FULL PyMca
+        self.wind = PyMcaMain()
+        self.wind.show()
+        print("worker thread")
+    #    self.app.exec()
+        self.processEvents()
+
+    def processEvents(self):
+        print("every second")
+        self.m_timer.start(1000)
+        self.app.processEvents()
+
 
 class TASpymca():
     def __init__(self):
@@ -13,13 +36,13 @@ class TASpymca():
         self.datafile_name = 'HB3_exp0798_scan0090.dat'
         self.fname = os.path.join(PyMcaDataDir.PYMCA_DATA_DIR, f'{self.datafile_path}{self.datafile_name}')
         # ONLY PLOT WINDOW
-        self.app = qt.QApplication([])
+    #    self.app = qt.QApplication([])
         #self.wind = pltwind(roi=True, fit=True)
         #self.wind.show()
         
         # FULL PyMca
-        self.wind = PyMcaMain()
-        self.wind.show()
+    #    self.wind = PyMcaMain()
+    #    self.wind.show()
         #self.set_datafile()
         #self.load_datafile()
 
@@ -28,16 +51,22 @@ class TASpymca():
 
         #self.set_window()
 
-    #    self.app.exec()
+        #self.app.exec()
 
-    def run(self):
-        self.app.processEvents()
+        print("Before thread")
+        self.thread = WorkerThread()
+    #    self.thread.start()
+        self.thread.run()
+        print("After start")
+
+#    def run(self):
+#        self.app.processEvents()
 
 
     def load_datafile(self):
 
-        self.wind.sourceWidget.sourceSelector.openSource(self.fname)
- 
+        self.thread.wind.sourceWidget.sourceSelector.openSource(self.fname)
+        self.thread.app.processEvents()
         #wind.sourceWidget.sourceSelector.update(f'{datafile_path}{datafile_name}')
 
         #wind.sourceWidget.sourceSelector.actions()

@@ -20,8 +20,8 @@ dbLoadRecords("${TOP}/db/pymca.db")
 cd ${TOP}/iocBoot/${IOC}
 
 # PyDev: temporary, will replace with a PV that launches pymca
-pydev("import TASpymca")
-pydev("pymca_window = TASpymca.TASpymca()")
+#pydev("import TASpymca")
+#pydev("pymca_window = TASpymca.TASpymca()")
 # pydev("pymca_window.load_datafile()")
 
 # Using pyepics for PyMca control

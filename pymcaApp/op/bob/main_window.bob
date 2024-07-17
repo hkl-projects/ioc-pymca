@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-07-17 11:12:20 by kg1-->
+<!--Saved on 2024-07-17 15:20:10 by kg1-->
 <display version="2.0.0">
   <macros>
     <Sys>HB3</Sys>
@@ -1255,15 +1255,16 @@ print 'Hello'
         <description>GUI on</description>
       </action>
     </actions>
-    <x>396</x>
+    <x>427</x>
     <y>18</y>
     <width>84</width>
     <height>36</height>
+    <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_33</name>
     <pv_name>$(Sys)$(Dev)pymca:on</pv_name>
-    <x>506</x>
+    <x>552</x>
     <y>30</y>
     <width>146</width>
     <height>18</height>
@@ -1283,5 +1284,19 @@ print 'Hello'
       <color name="green-18" red="0" green="160" blue="0">
       </color>
     </border_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_3</name>
+    <actions>
+      <action type="command">
+        <command>bash /epics/iocs/ioc-pymca/python/PyMcaApp/pymcaInteractive.sh</command>
+        <description>pymcaApp</description>
+      </action>
+    </actions>
+    <x>300</x>
+    <y>18</y>
+    <width>102</width>
+    <height>42</height>
+    <tooltip>$(actions)</tooltip>
   </widget>
 </display>

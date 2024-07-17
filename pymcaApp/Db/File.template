@@ -83,3 +83,14 @@ record(longout, "$(P)$(R)FileNumber_RBV")
 #   field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))TPX3_RAW1_QUEUESIZE")
 #   field(SCAN, "I/O Intr")
 }
+
+record(waveform, "$(P)$(R)FileText")
+{
+    field(DESC, "File Text")
+    field(PINI, "YES")
+    field(DTYP, "pydev")
+#    field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))BPC_FILE_PATH")
+    field(FTVL, "CHAR")
+    field(NELM, "25600")
+    info(autosaveFields, "VAL")
+} 

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-07-17 15:20:10 by kg1-->
+<!--Saved on 2024-07-17 15:55:03 by kg1-->
 <display version="2.0.0">
   <macros>
     <Sys>HB3</Sys>
     <Dev>:</Dev>
   </macros>
-  <width>730</width>
+  <width>1500</width>
   <height>580</height>
   <background_color>
     <color red="240" green="240" blue="240">
@@ -20,7 +20,7 @@
     <actions>
       <action type="command">
         <command>pymca</command>
-        <description>Execute Command</description>
+        <description>PyMca app</description>
       </action>
     </actions>
     <x>42</x>
@@ -42,7 +42,7 @@ print 'Hello'
         <description>Execute Script</description>
       </action>
     </actions>
-    <x>180</x>
+    <x>162</x>
     <y>18</y>
     <width>102</width>
     <height>36</height>
@@ -1255,7 +1255,7 @@ print 'Hello'
         <description>GUI on</description>
       </action>
     </actions>
-    <x>427</x>
+    <x>282</x>
     <y>18</y>
     <width>84</width>
     <height>36</height>
@@ -1264,8 +1264,8 @@ print 'Hello'
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_33</name>
     <pv_name>$(Sys)$(Dev)pymca:on</pv_name>
-    <x>552</x>
-    <y>30</y>
+    <x>282</x>
+    <y>54</y>
     <width>146</width>
     <height>18</height>
     <background_color>
@@ -1293,10 +1293,63 @@ print 'Hello'
         <description>pymcaApp</description>
       </action>
     </actions>
-    <x>300</x>
+    <x>590</x>
     <y>18</y>
     <width>102</width>
     <height>42</height>
     <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Input_13</name>
+    <pv_name>$(Sys)$(Dev)FileText</pv_name>
+    <x>720</x>
+    <y>22</y>
+    <width>762</width>
+    <height>558</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="10.891089108910892">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <vertical_alignment>0</vertical_alignment>
+    <wrap_words>true</wrap_words>
+    <multi_line>true</multi_line>
+    <actions>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_34</name>
+    <pv_name>$(Sys)$(Dev)FileText.DESC</pv_name>
+    <x>732</x>
+    <width>132</width>
+    <height>22</height>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color name="green-18" red="0" green="160" blue="0">
+      </color>
+    </border_color>
   </widget>
 </display>

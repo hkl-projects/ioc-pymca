@@ -1,0 +1,40 @@
+#=================================================================#
+# Template file: StatsInfo.template
+# Database for PyMca plot statistics
+# Kazimierz Gofron
+# Alexander Baekey
+# July 17, 2024
+#=================================================================#
+
+###################################################################
+#  These records report statistics of the plot                                 # 
+###################################################################
+
+# Statistics from plot
+record(ao, "$(P)$(R)Peak") {
+    field(DESC, "Peak")
+    field(PINI, "YES")
+    field(DTYP, "pydev")
+#    field(OUT, "@hkl_calc.wavelength")
+}
+
+record(ai, "$(P)$(R)Peak_RBV") {
+    field(DESC, "Peak")
+    field(PINI, "YES")
+    field(DTYP, "pydev")
+#    field(INP, "@hkl_calc.wavelength")
+}
+
+record(ao, "$(P)$(R)PeakAt") {
+    field(DESC, "Peak At")
+    field(PINI, "YES")
+    field(DTYP, "pydev")
+#    field(OUT, "@hkl_calc.wavelength")
+}
+
+record(ai, "$(P)$(R)PeakAt_RBV") {
+    field(DESC, "Peak At RBV")
+    field(PINI, "YES")
+    field(DTYP, "pydev")
+#    field(INP, "@hkl_calc.wavelength")
+}

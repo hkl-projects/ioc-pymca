@@ -1,5 +1,79 @@
-record(ai, "pymca:on") {
+#=================================================================#
+# Template file: File.template
+# Database for PyMca control from EPICS ioc
+# Kazimierz Gofron
+# Alexander Baekey
+# July 17, 2024
+#=================================================================#
+
+###################################################################
+#  These records control file I/O                                 # 
+###################################################################
+
+# GUI control
+record(ai, "$(P)$(R)pymca:on") {
     field(DESC, "pymca on")
     field(DTYP, "pydev")
     field(INP, "@pymca_window.load_datafile")
+}
+
+# File path.
+record(waveform, "$(P)$(R)FilePath")
+{
+    field(DESC, "File Path")
+    field(PINI, "YES")
+    field(DTYP, "pydev")
+#    field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))BPC_FILE_PATH")
+    field(FTVL, "CHAR")
+    field(NELM, "256")
+    info(autosaveFields, "VAL")
+}
+
+record(waveform, "$(P)$(R)FilePath_RBV")
+{
+    field(DESC, "File Path RBV")
+    field(PINI, "YES")
+    field(DTYP, "pydev")
+#    field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))BPC_FILE_PATH")
+    field(FTVL, "CHAR")
+    field(NELM, "256")
+    info(autosaveFields, "VAL")
+}
+
+record(waveform, "$(P)$(R)FileName")
+{
+    field(DESC, "File Name")
+    field(PINI, "YES")
+    field(DTYP, "pydev")
+#    field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))BPC_FILE_PATH")
+    field(FTVL, "CHAR")
+    field(NELM, "256")
+    info(autosaveFields, "VAL")
+} 
+
+record(waveform, "$(P)$(R)FileName_RBV")
+{
+    field(DESC, "File Name RBV")
+    field(PINI, "YES")
+    field(DTYP, "pydev")
+#    field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))BPC_FILE_PATH")
+    field(FTVL, "CHAR")
+    field(NELM, "256")
+    info(autosaveFields, "VAL")
+} 
+
+record(longout, "$(P)$(R)FileNumber")
+{
+    field(DESC, "File Number")
+    field(DTYP, "pydev")
+    field(OUT,  "@print('Hello world!')")
+    info(autosaveFields, "VAL")
+}
+
+record(longout, "$(P)$(R)FileNumber_RBV")
+{
+    field(DESC, "File Number")
+   field(DTYP, "pydev")
+#   field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))TPX3_RAW1_QUEUESIZE")
+   field(SCAN, "I/O Intr")
 }

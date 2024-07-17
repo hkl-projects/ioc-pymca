@@ -1,0 +1,11 @@
+file File.template
+{
+pattern {P,R}
+{  HB3, : }
+}
+
+file StatsInfo.template
+{
+pattern {P,R}
+{  HB3, : }
+}

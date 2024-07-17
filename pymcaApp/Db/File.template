@@ -11,10 +11,16 @@
 ###################################################################
 
 # GUI control
-record(ai, "$(P)$(R)pymca:on") {
-    field(DESC, "pymca on")
+#record(bi, "$(P)$(R)pymca:on") {
+#    field(DESC, "pymca on")
+#    field(DTYP, "pydev")
+#    field(INP, "@pymca_window.load_datafile")
+#}
+
+record(bo, "$(P)$(R)pymca:on") {
+    field(DESC, "GUI on")
     field(DTYP, "pydev")
-    field(INP, "@pymca_window.load_datafile")
+    field(OUT, "@pymca_window.run()")
 }
 
 # File path.

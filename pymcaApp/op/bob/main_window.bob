@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-07-17 08:14:55 by kg1-->
+<!--Saved on 2024-07-17 11:12:20 by kg1-->
 <display version="2.0.0">
   <macros>
     <Sys>HB3</Sys>
@@ -1245,5 +1245,43 @@ print 'Hello'
     <y>252</y>
     <width>552</width>
     <height>6</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>GUI on</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(Sys)$(Dev)pymca:on</pv_name>
+        <value>1</value>
+        <description>GUI on</description>
+      </action>
+    </actions>
+    <x>396</x>
+    <y>18</y>
+    <width>84</width>
+    <height>36</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_33</name>
+    <pv_name>$(Sys)$(Dev)pymca:on</pv_name>
+    <x>506</x>
+    <y>30</y>
+    <width>146</width>
+    <height>18</height>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>4</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_width>2</border_width>
+    <border_color>
+      <color name="green-18" red="0" green="160" blue="0">
+      </color>
+    </border_color>
   </widget>
 </display>

@@ -28,7 +28,10 @@ class TASpymca():
 
         #self.set_window()
 
-        self.app.exec()
+    #    self.app.exec()
+
+    def run(self):
+        self.app.processEvents()
 
 
     def load_datafile(self):

@@ -5,6 +5,9 @@
 # PYTHONPATH points to folders where Python modules are.
 epicsEnvSet("PYTHONPATH","$(TOP)/python")
 
+# Prefix set for Triple Axis Spectrometer -> TAS
+epicsEnvSet("PREFIX", "HB3:")
+
 cd ${TOP}
 
 ## Register all support components
@@ -20,3 +23,8 @@ cd ${TOP}/iocBoot/${IOC}
 pydev("import TASpymca")
 pydev("pymca_window = TASpymca.TASpymca()")
 pydev("pymca_window.load_datafile()")
+
+iocInit
+
+dbpf("$(PREFIX)Peak","2")
+dbl > pvlist.dbl

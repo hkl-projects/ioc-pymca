@@ -81,5 +81,5 @@ record(longout, "$(P)$(R)FileNumber_RBV")
     field(DESC, "File Number")
    field(DTYP, "pydev")
 #   field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))TPX3_RAW1_QUEUESIZE")
-   field(SCAN, "I/O Intr")
+#   field(SCAN, "I/O Intr")
 }

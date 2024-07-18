@@ -5,7 +5,7 @@ from PyMca5 import PyMcaDataDir
 from PyQt5.QtCore import QThread,QTimer
 #from PyMca5.PyMcaGui.pymca import QDispatcher
 #from PyMca5.PyMcaGui.plotting.PlotWindow import PlotWindow as pltwind 
-import epics
+#import epics
 import os
 
 class WorkerThread(QThread):

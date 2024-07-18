@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-07-17 15:55:03 by kg1-->
+<!--Saved on 2024-07-17 16:08:26 by kg1-->
 <display version="2.0.0">
   <macros>
     <Sys>HB3</Sys>
@@ -149,7 +149,7 @@ print 'Hello'
       </color>
     </background_color>
     <format>1</format>
-    <precision>4</precision>
+    <precision>0</precision>
     <horizontal_alignment>1</horizontal_alignment>
     <actions>
     </actions>
@@ -188,7 +188,7 @@ print 'Hello'
       </color>
     </background_color>
     <format>1</format>
-    <precision>4</precision>
+    <precision>0</precision>
     <horizontal_alignment>1</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
     <wrap_words>false</wrap_words>

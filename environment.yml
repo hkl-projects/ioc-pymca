@@ -6,8 +6,10 @@ dependencies:
   - python=3.10
   - pip
   - pip:
-    - -r requirements.txt
+#    - -r requirements.txt
     - git+https://github.com/hkl-projects/pymca.git
     - PyQt5
-    
+    - pcaspy
+
+
 

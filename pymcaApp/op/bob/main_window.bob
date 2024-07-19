@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-07-17 16:08:26 by kg1-->
+<!--Saved on 2024-07-18 18:51:56 by kg1-->
 <display version="2.0.0">
   <macros>
     <Sys>HB3</Sys>
@@ -52,7 +52,7 @@ print 'Hello'
     <name>Text Input</name>
     <pv_name>$(Sys)$(Dev)Peak.VAL</pv_name>
     <x>198</x>
-    <y>288</y>
+    <y>354</y>
     <width>150</width>
     <height>22</height>
     <background_color>
@@ -91,7 +91,7 @@ print 'Hello'
     <name>Text Update_5</name>
     <pv_name>$(Sys)$(Dev)Peak_RBV</pv_name>
     <x>360</x>
-    <y>288</y>
+    <y>354</y>
     <width>146</width>
     <height>18</height>
     <background_color>
@@ -115,7 +115,7 @@ print 'Hello'
     <name>Text Update_6</name>
     <pv_name>$(Sys)$(Dev)Peak.DESC</pv_name>
     <x>42</x>
-    <y>288</y>
+    <y>354</y>
     <width>132</width>
     <height>22</height>
     <font>
@@ -139,7 +139,7 @@ print 'Hello'
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>Text Input_1</name>
-    <pv_name>$(Sys)$(Dev)FileNumber.VAL</pv_name>
+    <pv_name>$(Sys)$(Dev)FileNumber</pv_name>
     <x>198</x>
     <y>216</y>
     <width>150</width>
@@ -338,7 +338,7 @@ print 'Hello'
     <name>Text Input_4</name>
     <pv_name>$(Sys)$(Dev)PeakAt.VAL</pv_name>
     <x>198</x>
-    <y>310</y>
+    <y>376</y>
     <width>150</width>
     <height>22</height>
     <background_color>
@@ -377,7 +377,7 @@ print 'Hello'
     <name>Text Update_13</name>
     <pv_name>$(Sys)$(Dev)PeakAt_RBV</pv_name>
     <x>360</x>
-    <y>310</y>
+    <y>376</y>
     <width>146</width>
     <height>18</height>
     <background_color>
@@ -401,7 +401,7 @@ print 'Hello'
     <name>Text Update_14</name>
     <pv_name>$(Sys)$(Dev)PeakAt.DESC</pv_name>
     <x>42</x>
-    <y>310</y>
+    <y>376</y>
     <width>132</width>
     <height>22</height>
     <font>
@@ -427,7 +427,7 @@ print 'Hello'
     <name>Text Input_5</name>
     <pv_name>$(Sys)$(Dev)FWHM.VAL</pv_name>
     <x>198</x>
-    <y>332</y>
+    <y>398</y>
     <width>150</width>
     <height>22</height>
     <background_color>
@@ -466,7 +466,7 @@ print 'Hello'
     <name>Text Update_15</name>
     <pv_name>$(Sys)$(Dev)FWHM_RBV</pv_name>
     <x>360</x>
-    <y>332</y>
+    <y>398</y>
     <width>146</width>
     <height>18</height>
     <background_color>
@@ -490,7 +490,7 @@ print 'Hello'
     <name>Text Update_16</name>
     <pv_name>$(Sys)$(Dev)FWHM.DESC</pv_name>
     <x>42</x>
-    <y>332</y>
+    <y>398</y>
     <width>132</width>
     <height>22</height>
     <font>
@@ -516,7 +516,7 @@ print 'Hello'
     <name>Text Input_6</name>
     <pv_name>$(Sys)$(Dev)FWHMat.VAL</pv_name>
     <x>198</x>
-    <y>354</y>
+    <y>420</y>
     <width>150</width>
     <height>22</height>
     <background_color>
@@ -555,7 +555,7 @@ print 'Hello'
     <name>Text Update_17</name>
     <pv_name>$(Sys)$(Dev)FWHMat_RBV</pv_name>
     <x>360</x>
-    <y>354</y>
+    <y>420</y>
     <width>146</width>
     <height>18</height>
     <background_color>
@@ -579,7 +579,7 @@ print 'Hello'
     <name>Text Update_18</name>
     <pv_name>$(Sys)$(Dev)FWHMat.DESC</pv_name>
     <x>42</x>
-    <y>354</y>
+    <y>420</y>
     <width>132</width>
     <height>22</height>
     <font>
@@ -605,7 +605,7 @@ print 'Hello'
     <name>Text Input_7</name>
     <pv_name>$(Sys)$(Dev)Com.VAL</pv_name>
     <x>198</x>
-    <y>376</y>
+    <y>442</y>
     <width>150</width>
     <height>22</height>
     <background_color>
@@ -644,7 +644,7 @@ print 'Hello'
     <name>Text Update_19</name>
     <pv_name>$(Sys)$(Dev)Com_RBV</pv_name>
     <x>360</x>
-    <y>376</y>
+    <y>442</y>
     <width>146</width>
     <height>18</height>
     <background_color>
@@ -668,7 +668,7 @@ print 'Hello'
     <name>Text Update_20</name>
     <pv_name>$(Sys)$(Dev)Com.DESC</pv_name>
     <x>42</x>
-    <y>376</y>
+    <y>442</y>
     <width>132</width>
     <height>22</height>
     <font>
@@ -694,7 +694,7 @@ print 'Hello'
     <name>Text Input_8</name>
     <pv_name>$(Sys)$(Dev)Mean.VAL</pv_name>
     <x>198</x>
-    <y>398</y>
+    <y>464</y>
     <width>150</width>
     <height>22</height>
     <background_color>
@@ -733,7 +733,7 @@ print 'Hello'
     <name>Text Update_21</name>
     <pv_name>$(Sys)$(Dev)Mean_RBV</pv_name>
     <x>360</x>
-    <y>398</y>
+    <y>464</y>
     <width>146</width>
     <height>18</height>
     <background_color>
@@ -757,7 +757,7 @@ print 'Hello'
     <name>Text Update_22</name>
     <pv_name>$(Sys)$(Dev)Mean.DESC</pv_name>
     <x>42</x>
-    <y>398</y>
+    <y>464</y>
     <width>132</width>
     <height>22</height>
     <font>
@@ -783,7 +783,7 @@ print 'Hello'
     <name>Text Input_9</name>
     <pv_name>$(Sys)$(Dev)Std.VAL</pv_name>
     <x>198</x>
-    <y>420</y>
+    <y>486</y>
     <width>150</width>
     <height>22</height>
     <background_color>
@@ -822,7 +822,7 @@ print 'Hello'
     <name>Text Update_23</name>
     <pv_name>$(Sys)$(Dev)Std_RBV</pv_name>
     <x>360</x>
-    <y>420</y>
+    <y>486</y>
     <width>146</width>
     <height>18</height>
     <background_color>
@@ -846,7 +846,7 @@ print 'Hello'
     <name>Text Update_24</name>
     <pv_name>$(Sys)$(Dev)Std.DESC</pv_name>
     <x>42</x>
-    <y>420</y>
+    <y>486</y>
     <width>132</width>
     <height>22</height>
     <font>
@@ -872,7 +872,7 @@ print 'Hello'
     <name>Text Input_10</name>
     <pv_name>$(Sys)$(Dev)Min.VAL</pv_name>
     <x>198</x>
-    <y>442</y>
+    <y>508</y>
     <width>150</width>
     <height>22</height>
     <background_color>
@@ -911,7 +911,7 @@ print 'Hello'
     <name>Text Update_25</name>
     <pv_name>$(Sys)$(Dev)Min_RBV</pv_name>
     <x>360</x>
-    <y>442</y>
+    <y>508</y>
     <width>146</width>
     <height>18</height>
     <background_color>
@@ -935,7 +935,7 @@ print 'Hello'
     <name>Text Update_26</name>
     <pv_name>$(Sys)$(Dev)Min.DESC</pv_name>
     <x>42</x>
-    <y>442</y>
+    <y>508</y>
     <width>132</width>
     <height>22</height>
     <font>
@@ -961,7 +961,7 @@ print 'Hello'
     <name>Text Input_11</name>
     <pv_name>$(Sys)$(Dev)Max.VAL</pv_name>
     <x>198</x>
-    <y>464</y>
+    <y>530</y>
     <width>150</width>
     <height>22</height>
     <background_color>
@@ -1000,7 +1000,7 @@ print 'Hello'
     <name>Text Update_27</name>
     <pv_name>$(Sys)$(Dev)Max_RBV</pv_name>
     <x>360</x>
-    <y>464</y>
+    <y>530</y>
     <width>146</width>
     <height>18</height>
     <background_color>
@@ -1024,7 +1024,7 @@ print 'Hello'
     <name>Text Update_28</name>
     <pv_name>$(Sys)$(Dev)Max.DESC</pv_name>
     <x>42</x>
-    <y>464</y>
+    <y>530</y>
     <width>132</width>
     <height>22</height>
     <font>
@@ -1050,7 +1050,7 @@ print 'Hello'
     <name>Text Input_12</name>
     <pv_name>$(Sys)$(Dev)Delta.VAL</pv_name>
     <x>198</x>
-    <y>486</y>
+    <y>552</y>
     <width>150</width>
     <height>22</height>
     <background_color>
@@ -1089,7 +1089,7 @@ print 'Hello'
     <name>Text Update_29</name>
     <pv_name>$(Sys)$(Dev)Delta_RBV</pv_name>
     <x>360</x>
-    <y>486</y>
+    <y>552</y>
     <width>146</width>
     <height>18</height>
     <background_color>
@@ -1113,7 +1113,7 @@ print 'Hello'
     <name>Text Update_30</name>
     <pv_name>$(Sys)$(Dev)Delta.DESC</pv_name>
     <x>42</x>
-    <y>486</y>
+    <y>552</y>
     <width>132</width>
     <height>22</height>
     <font>
@@ -1242,7 +1242,7 @@ print 'Hello'
   <widget type="rectangle" version="2.0.0">
     <name>Rectangle</name>
     <x>42</x>
-    <y>252</y>
+    <y>292</y>
     <width>552</width>
     <height>6</height>
   </widget>
@@ -1301,7 +1301,7 @@ print 'Hello'
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>Text Input_13</name>
-    <pv_name>$(Sys)$(Dev)FileText</pv_name>
+    <pv_name>$(Sys)$(Dev)SpecFile</pv_name>
     <x>720</x>
     <y>22</y>
     <width>762</width>
@@ -1329,7 +1329,7 @@ print 'Hello'
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_34</name>
-    <pv_name>$(Sys)$(Dev)FileText.DESC</pv_name>
+    <pv_name>$(Sys)$(Dev)SpecFile.DESC</pv_name>
     <x>732</x>
     <width>132</width>
     <height>22</height>
@@ -1349,6 +1349,149 @@ print 'Hello'
     <border_alarm_sensitive>false</border_alarm_sensitive>
     <border_color>
       <color name="green-18" red="0" green="160" blue="0">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_4</name>
+    <actions>
+      <action type="command">
+        <command>bash /epics/iocs/ioc-pymca/python/pcaspy/pcaspyInteractive.sh</command>
+        <description>pcaspy</description>
+      </action>
+    </actions>
+    <x>60</x>
+    <y>606</y>
+    <width>102</width>
+    <height>42</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_35</name>
+    <pv_name>$(Sys)$(Dev)RAND</pv_name>
+    <x>60</x>
+    <y>660</y>
+    <width>146</width>
+    <height>18</height>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>4</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_width>2</border_width>
+    <border_color>
+      <color name="green-18" red="0" green="160" blue="0">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_37</name>
+    <pv_name>$(Sys)$(Dev)FullFileName_RBV.DESC</pv_name>
+    <x>10</x>
+    <y>258</y>
+    <width>132</width>
+    <height>22</height>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color name="green-18" red="0" green="160" blue="0">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_38</name>
+    <pv_name>$(Sys)$(Dev)FullFileName_RBV</pv_name>
+    <x>148</x>
+    <y>258</y>
+    <width>544</width>
+    <height>18</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="10.891089108910892">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Exists:</text>
+    <x>576</x>
+    <y>234</y>
+    <width>70</width>
+    <font>
+      <font family="Sans" style="REGULAR" size="10.891089108910892">
+      </font>
+    </font>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_39</name>
+    <pv_name>$(Sys)$(Dev)FilePathExists_RBV</pv_name>
+    <x>651</x>
+    <y>234</y>
+    <width>40</width>
+    <font>
+      <font family="Sans" style="REGULAR" size="10.891089108910892">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="218" green="218" blue="218">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255">
       </color>
     </border_color>
   </widget>

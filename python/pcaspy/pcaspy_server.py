@@ -13,7 +13,6 @@ pvdb = {
     # Test PV
     'RAND' : {'prec' : 3,'scan' : 1},
 
-
     # Spectra data descriptors
     'NColumns_RBV':  {'type': 'int'},
     'NRows_RBV':     {'type': 'int'},
@@ -35,6 +34,18 @@ pvdb = {
     'FullFileName_RBV':   {'type': 'char', 'count': 256},
     'FilePathExists_RBV': {'type': 'enum', 'enums': ['No', 'Yes'],
         'states': [Severity.MAJOR_ALARM, Severity.NO_ALARM]},
+
+    # Scan windows Info
+    'Peak_RBV':     {'type': 'int'},
+    'PeakAt_RBV':   {'type': 'int'},
+    'FWHM_RBV':     {'type': 'int'},
+    'FWHMat_RBV':   {'type': 'int'},    
+    'Com_RBV':      {'type': 'int'},
+    'Mean_RBV':     {'type': 'int'},
+    'Std_RBV':      {'type': 'int'},
+    'Min_RBV':      {'type': 'int'},
+    'Max_RBV':      {'type': 'int'},
+    'Delta_RBV':    {'type': 'int'},    
 }
 
 class PyMcaDriver(Driver):
@@ -55,5 +66,4 @@ if __name__ == '__main__':
     driver = PyMcaDriver()
     while True:
         server.process(0.1)
-    
     

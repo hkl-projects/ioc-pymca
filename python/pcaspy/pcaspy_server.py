@@ -29,7 +29,9 @@ pvdb = {
     'FilePath':           {'type': 'char', 'count': 128},
     'FileName':           {'type': 'char', 'count': 128, 'value': 'test'},
     'FileNumber':         {'type': 'int'},
-    'FileTemplate':       {'type': 'str', 'value': '%s_%04d.dat'},
+    'FileExtension':      {'type': 'char', 'count': 24, 'value': '.dat'},
+    #'FileTemplate':       {'type': 'str', 'value': '%s_%04d.dat'},
+    'FileTemplate':       {'type': 'str', 'type': 'str', 'value': '%s%d%s'},
     'AutoIncrement':      {'type': 'enum', 'enums': ['No', 'Yes'], 'value': 1},
     'AutoSave':           {'type': 'enum', 'enums': ['No', 'Yes'], 'value': 1},
     'FullFileName_RBV':   {'type': 'char', 'count': 256},
@@ -61,16 +63,19 @@ class PyMcaDriver(Driver):
             value = self.getParam(reason)
         return value
     
-    def readFile(self):
+#    def readFile(self, reason, value):
+    def readFile(self):        
         path = self.getParam('FilePath')
         name = self.getParam('FileName')
         number = self.getParam('FileNumber')
         template = self.getParam('FileTemplate')
+        extension = self.getParam('FileExtension')
         increment = self.getParam('AutoIncrement')
         auto_save = self.getParam('AutoSave')
 
-        fullFileName = os.path.join(path, template % (name, number))
+        fullFileName = os.path.join(path, template % (name, number, extension))
         self.setParam('FullFileName_RBV', fullFileName)
+        self.updatePVs()
         print("read file")
 
 if __name__ == '__main__':

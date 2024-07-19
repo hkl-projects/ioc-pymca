@@ -29,6 +29,7 @@ pvdb = {
     'FilePath':           {'type': 'char', 'count': 128},
     'FileName':           {'type': 'char', 'count': 128, 'value': 'test'},
     'FileNumber':         {'type': 'int'},
+    'FileTemplate':       {'type': 'str', 'value': '%s_%04d.dat'},
     'AutoIncrement':      {'type': 'enum', 'enums': ['No', 'Yes'], 'value': 1},
     'AutoSave':           {'type': 'enum', 'enums': ['No', 'Yes'], 'value': 1},
     'FullFileName_RBV':   {'type': 'char', 'count': 256},
@@ -59,6 +60,18 @@ class PyMcaDriver(Driver):
         else:
             value = self.getParam(reason)
         return value
+    
+    def readFile(self):
+        path = self.getParam('FilePath')
+        name = self.getParam('FileName')
+        number = self.getParam('FileNumber')
+        template = self.getParam('FileTemplate')
+        increment = self.getParam('AutoIncrement')
+        auto_save = self.getParam('AutoSave')
+
+        fullFileName = os.path.join(path, template % (name, number))
+        self.setParam('FullFileName_RBV', fullFileName)
+        print("read file")
 
 if __name__ == '__main__':
     server = SimpleServer()
@@ -66,4 +79,5 @@ if __name__ == '__main__':
     driver = PyMcaDriver()
     while True:
         server.process(0.1)
+        driver.readFile()
     

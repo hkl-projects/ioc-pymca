@@ -6,7 +6,6 @@ import random
 from pcaspy import Driver, SimpleServer, Severity
 
 prefix = 'HB3:'
-# prefix = 'MTEST:'
 pvdb = {
     # Test PV
     'RAND' : {'prec' : 3, 'scan' : 1},
@@ -114,21 +113,8 @@ class PyMcaDriver(Driver):
 
         self.updatePVs()
 
-#        #status = False
+        #status = False
         return status
-
-    def readFile(self):        
-        path = self.getParam('FilePath')
-        name = self.getParam('FileName')
-        number = self.getParam('FileNumber')
-        template = self.getParam('FileTemplate')
-        extension = self.getParam('FileExtension')
-        increment = self.getParam('AutoIncrement')
-        auto_save = self.getParam('AutoSave')
-        fullFileName = os.path.join(path, template % (name, number, extension))
-        self.setParam('FullFileName_RBV', fullFileName)
-        self.updatePVs()
-        print("read file")
 
 if __name__ == '__main__':
     server = SimpleServer()
@@ -136,5 +122,5 @@ if __name__ == '__main__':
     driver = PyMcaDriver()
     while True:
         server.process(0.1)
-    #    driver.readFile()
+
     

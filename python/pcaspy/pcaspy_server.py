@@ -5,13 +5,18 @@ import random
 
 from pcaspy import Driver, SimpleServer, Severity
 
-DETECTOR_ID = 0
-
 prefix = 'HB3:'
 # prefix = 'MTEST:'
 pvdb = {
     # Test PV
-    'RAND' : {'prec' : 3,'scan' : 1},
+    'RAND' : {'prec' : 3, 'scan' : 1},
+
+    # acquisition control and status
+    'Acquire': {
+        'type': 'enum',
+        'enums': ['Stop', 'Start'],
+        'asyn': True
+    },
 
     # Spectra data descriptors
     'NColumns_RBV':  {'type': 'int'},
@@ -30,12 +35,13 @@ pvdb = {
     'FileName':           {'type': 'char', 'count': 128, 'value': 'test'},
     'FileNumber':         {'type': 'int'},
     'FileExtension':      {'type': 'char', 'count': 24, 'value': '.dat'},
-    #'FileTemplate':       {'type': 'str', 'value': '%s_%04d.dat'},
-    'FileTemplate':       {'type': 'str', 'type': 'str', 'value': '%s%d%s'},
+    'FileTemplate':       {'type': 'str', 'type': 'str', 'value': '%s%04d%s'},
     'AutoIncrement':      {'type': 'enum', 'enums': ['No', 'Yes'], 'value': 1},
     'AutoSave':           {'type': 'enum', 'enums': ['No', 'Yes'], 'value': 1},
     'FullFileName_RBV':   {'type': 'char', 'count': 256},
     'FilePathExists_RBV': {'type': 'enum', 'enums': ['No', 'Yes'],
+        'states': [Severity.MAJOR_ALARM, Severity.NO_ALARM]},
+    'FileExists_RBV': {'type': 'enum', 'enums': ['No', 'Yes'],
         'states': [Severity.MAJOR_ALARM, Severity.NO_ALARM]},
 
     # Scan windows Info
@@ -63,7 +69,54 @@ class PyMcaDriver(Driver):
             value = self.getParam(reason)
         return value
     
-#    def readFile(self, reason, value):
+    def write(self, reason, value):
+        status = True
+        # take proper actions
+        if reason == 'Acquire':
+            self.setParam(reason, value)
+            print("Start PyMca, read spectrum file")
+
+            # Read Spec file
+            fileExists = self.getParam('FileExists_RBV')
+            fileName = self.getParam('FullFileName_RBV')
+            if fileExists:
+                str = open(fileName, 'r').read()
+                self.setParam('SpecFile', str)
+
+#            self.setParam('Acquire', 0)
+##           self.callbackPV('Acquire')
+
+        if reason == 'FilePath':
+            self.setParam(reason, value)
+            self.setParam('FilePathExists_RBV',
+                    os.path.exists(value) and os.access(value, os.R_OK))
+        if reason == 'FileName':
+            self.setParam(reason,value)
+        if reason == 'FileNumber':
+            self.setParam(reason, value)
+        if reason == 'FileTemplate':
+            self.setParam(reason, value)
+        if reason == 'FileExtension':
+            self.setParam(reason, value)
+
+        path = self.getParam('FilePath')
+        name = self.getParam('FileName')
+        number = self.getParam('FileNumber')
+        template = self.getParam('FileTemplate')
+        extension = self.getParam('FileExtension')
+        increment = self.getParam('AutoIncrement')
+        autoSave = self.getParam('AutoSave')
+
+        fullFileName = os.path.join(path, template % (name, number, extension))
+        self.setParam('FullFileName_RBV', fullFileName)
+        self.setParam('FileExists_RBV',
+                      os.path.exists(fullFileName) and os.access(fullFileName, os.R_OK))
+
+        self.updatePVs()
+
+#        #status = False
+        return status
+
     def readFile(self):        
         path = self.getParam('FilePath')
         name = self.getParam('FileName')
@@ -72,7 +125,6 @@ class PyMcaDriver(Driver):
         extension = self.getParam('FileExtension')
         increment = self.getParam('AutoIncrement')
         auto_save = self.getParam('AutoSave')
-
         fullFileName = os.path.join(path, template % (name, number, extension))
         self.setParam('FullFileName_RBV', fullFileName)
         self.updatePVs()
@@ -84,5 +136,5 @@ if __name__ == '__main__':
     driver = PyMcaDriver()
     while True:
         server.process(0.1)
-        driver.readFile()
+    #    driver.readFile()
     

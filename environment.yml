@@ -10,6 +10,6 @@ dependencies:
     - git+https://github.com/hkl-projects/pymca.git
     - PyQt5
     - pcaspy
-
+    - pandas
 
 

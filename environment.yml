@@ -11,5 +11,6 @@ dependencies:
     - PyQt5
     - pcaspy
     - pandas
+    - qtconsole
 
 
